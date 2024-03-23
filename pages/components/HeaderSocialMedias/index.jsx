@@ -1,8 +1,9 @@
 import React from "react";
+import styles from "./style.module.css";
 
 export default ({
   title,
-  styles,
+  classes,
   facebook,
   instagram,
   github,
@@ -11,15 +12,15 @@ export default ({
   icons,
 }) => {
   return (
-    <div className={styles}>
+    <div className={`${styles.header} ${classes}`}>
       <h1>{title}</h1>
-      <div className="socialMediaContainer">
+      <div className={styles.linkContainer}>
         {facebook && (
-          <a href={facebook} className="mediaButton">
+          <a href={facebook} className={styles.icons} target="_blank">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
+              width="26"
+              height="26"
               fill="currentColor"
               className="bi bi-facebook"
               viewBox="0 0 16 16"
@@ -29,12 +30,12 @@ export default ({
           </a>
         )}
         {instagram && (
-          <a href={instagram} className="mediaButton">
+          <a href={instagram} className={styles.icons} target="_blank">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
+              width="26"
+              height="26"
+              fill="red"
               className="bi bi-instagram"
               viewBox="0 0 16 16"
             >
@@ -43,11 +44,11 @@ export default ({
           </a>
         )}
         {github && (
-          <a href={github} className="mediaButton">
+          <a href={github} className={styles.icons} target="_blank">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
+              width="26"
+              height="26"
               fill="currentColor"
               className="bi bi-github"
               viewBox="0 0 16 16"
@@ -57,11 +58,11 @@ export default ({
           </a>
         )}
         {linkedin && (
-          <a href={linkedin} className="mediaButton">
+          <a href={linkedin} className={styles.icons} target="_blank">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
+              width="26"
+              height="26"
               fill="currentColor"
               className="bi bi-linkedin"
               viewBox="0 0 16 16"
@@ -71,11 +72,11 @@ export default ({
           </a>
         )}
         {twitter_x && (
-          <a href={twitter_x} className="mediaButton">
+          <a href={twitter_x} className={styles.icons} target="_blank">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
+              width="26"
+              height="26"
               fill="currentColor"
               className="bi bi-twitter-x"
               viewBox="0 0 16 16"

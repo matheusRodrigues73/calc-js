@@ -1,0 +1,19 @@
+.header {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.linkContainer {
+  display: flex;
+  gap: 15px;
+}
+
+.icons > svg {
+  fill: black;
+  border-radius: 30%;
+}

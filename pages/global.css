@@ -1,0 +1,64 @@
+:root {
+  /* colors */
+  --bg-color-primary: #2176ff;
+  --bg-color-light: #e0e0ff;
+  --bg-color-dark: #000022;
+  --bg-color-secondary: #bfbfbf;
+  --font-color: #201e1f;
+  --font-color-transparent: #0000008a;
+  --light-font-color: #efeff0;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  width: 550px;
+  background-color: var(--bg-color-light);
+  color: var(--font-color);
+}
+
+.header {
+  background-color: var(--bg-color-dark);
+  color: var(--light-font-color);
+  margin-bottom: 1rem;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+}
+
+.header svg {
+  fill: var(--light-font-color);
+}
+
+.bi::before {
+  vertical-align: -0.2em;
+}
+
+.calcButtonsContainer {
+  height: 420px;
+  margin: 0 10px 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: auto;
+  gap: 3px;
+}
+
+.calcBtn {
+  background-color: var(--bg-color-primary);
+  color: var(--light-font-color);
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 3px;
+}
