@@ -13,35 +13,20 @@ export default forwardRef((props, ref) => {
     } else {
       setPreviousResult("");
     }
-    if (String(props.inputValue)?.indexOf("=") !== -1) {
+    if (String(props.inputValue)?.includes("=")) {
       props.setInputValue((currentValue) => {
         return String(calc(currentValue.replace("=", "")));
       });
+    }
+    if (inputStatus === `${styles.error}`) {
+      props.setInputValue("");
+      setInputStatus("");
     }
     if (String(props.inputValue)?.includes("Error")) {
       setInputStatus(`${styles.error}`);
     }
   }, [props.inputValue]);
 
-  // const inputHandle = (value) => {
-  //   console.log(value);
-  //   if (value === "=") {
-  //     const result = calc(props.inputValue);
-  //     if (result instanceof Error) {
-  //       setInputStatus(styles.error);
-  //       alert(result.message);
-  //     } else if (Number(result)) {
-  //       props.setInputValue(result);
-  //     }
-  //   } else {
-  //     if (inputStatus === styles.error) {
-  //       setInputStatus("default");
-  //       props.setInputValue("");
-  //     } else {
-  //       props.setInputValue((currentValue) => (currentValue += value));
-  //     }
-  //   }
-  // };
   return (
     <div id={props.id ?? false}>
       <div>
@@ -49,7 +34,9 @@ export default forwardRef((props, ref) => {
           ref={ref ?? false}
           type="text"
           className={`${styles.calcInput} ${inputStatus}`}
+          disabled={true}
           value={props.inputValue}
+          onChange={(ev) => props.setInputValue(ev.target.value)}
         />
         <button
           className={styles.backspaceBtn}

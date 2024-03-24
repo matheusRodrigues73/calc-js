@@ -3,7 +3,6 @@ import HeaderSocialMedias from "./components/HeaderSocialMedias/index.jsx";
 import buttonsList from "./loaders/buttonsList.js";
 import textInput from "./loaders/textInput.js";
 import CalcInput from "./components/CalcInput/index.jsx";
-import calc from "./loaders/calc.js";
 
 export default () => {
   const [inputValue, setInputValue] = useState("");

@@ -1,6 +1,7 @@
 .calcInput {
-  width: 90%;
+  width: 87%;
   background-color: var(--bg-color-secondary);
+  color: #201e1f;
   font-size: 1.4rem;
   padding: 10px 5px;
   text-align: end;
@@ -12,20 +13,23 @@
   border: 1px solid #a92241;
 }
 .backspaceBtn {
-  width: 7%;
+  width: 10%;
   font-size: 1.4rem;
   background-color: var(--bg-color-secondary);
   padding: 10px 0;
-  border: none;
+  border-top: 1px solid var(--bg-color-dark);
+  border-right: 1px solid var(--bg-color-dark);
+  border-bottom: 1px solid var(--bg-color-dark);
+  border-left: none;
   border-radius: 0 8px 8px 0;
   margin-right: 1.5%;
 }
 
 .previousResult {
   box-sizing: content-box;
-  color: var(--font-color-transparent);
   height: 1rem;
+  color: var(--font-color-transparent);
   text-align: end;
-  padding: 10px;
-  margin: 0 8.5%;
+  padding: 10px 5px;
+  margin: 0 11.5%;
 }
